@@ -797,7 +797,8 @@ set_default POWERLEVEL9K_HOME_FOLDER_ABBREVIATION "~"
 set_default POWERLEVEL9K_DIR_PATH_HIGHLIGHT_BOLD false
 prompt_dir() {
   # using $PWD instead of "$(print -P '%~')" to allow use of POWERLEVEL9K_DIR_PATH_ABSOLUTE
-  local current_path=$PWD # WAS: local current_path="$(print -P '%~')"
+  #Local current_path=$PWD # WAS: 
+  local current_path="$(print -P '%~')"
   # check if the user wants to use absolute paths or "~" paths
   [[ ${(L)POWERLEVEL9K_DIR_PATH_ABSOLUTE} != "true" ]] && current_path=${current_path/#$HOME/"~"}
   # declare all local variables
