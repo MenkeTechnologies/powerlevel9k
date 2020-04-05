@@ -1276,7 +1276,7 @@ set_default POWERLEVEL9K_RBENV_PROMPT_ALWAYS_SHOW false
 prompt_rbenv() {
   if [[ -n "$RBENV_VERSION" ]]; then
     "$1_prompt_segment" "$0" "$2" "red" "$DEFAULT_COLOR" "$RBENV_VERSION" 'RUBY_ICON'
-  elif [ $commands[rbenv] ]; then
+  elif [ ${commands[rbenv]} ]; then
     local rbenv_version_name="$(rbenv version-name)"
     local rbenv_global="$(rbenv global)"
     if [[ "${rbenv_version_name}" != "${rbenv_global}" || "${POWERLEVEL9K_RBENV_PROMPT_ALWAYS_SHOW}" == "true" ]]; then

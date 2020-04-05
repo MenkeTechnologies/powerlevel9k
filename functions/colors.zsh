@@ -341,7 +341,7 @@ function getColorCode() {
       colorName=${colorName#fg-}
       # Strip eventual "br" prefixes ("bright" colors)
       colorName=${colorName#br}
-      echo -n $__P9K_COLORS[$colorName]
+      echo -n ${__P9K_COLORS[$colorName]}
   fi
 }
 
